@@ -1,0 +1,42 @@
+{
+  "name": "containership",
+  "version": "0.1.0",
+  "description": "A simple, distributed container management platform",
+  "main": "application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ContianerShip Developers <developers@containership.io>",
+  "license": "GPL-3.0",
+  "keywords": [
+    "simple",
+    "easy",
+    "containership",
+    "distributed",
+    "docker",
+    "container",
+    "deployment",
+    "management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/growbrosops/containership.git"
+  },
+  "bugs": {
+    "url": "https://github.com/growbrosops/containership/issues"
+  },
+  "homepage": "https://github.com/growbrosops/containership",
+  "dependencies": {
+    "containership.api": "^0.1.0",
+    "containership.cli": "^0.1.0",
+    "containership.core": "^0.1.0",
+    "containership.scheduler": "^0.1.0",
+    "daemon": "^1.1.0",
+    "lodash": "^2.4.1",
+    "nomnom": "^1.8.1"
+  },
+  "devDependencies": {},
+  "bin": {
+    "containership": "./application.js"
+  }
+}
