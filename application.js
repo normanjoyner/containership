@@ -3,10 +3,10 @@ var _ = require("lodash");
 var fs = require("fs");
 var pkg = require([__dirname, "package"].join("/"));
 var nomnom = require("nomnom");
-var CLI = require("../containership.cli");
+var CLI = require("containership.cli");
 var Core = require("containership.core");
 var Scheduler = require("containership.scheduler");
-var API = require("../containership.api");
+var API = require("containership.api");
 var daemon = require("daemon");
 var utils = require([__dirname, "utils"].join("/"));
 
