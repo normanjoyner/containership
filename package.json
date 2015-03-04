@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/growbrosops/containership",
   "dependencies": {
-    "containership.api": "^0.1.0",
-    "containership.cli": "^0.1.0",
-    "containership.core": "^0.1.1",
+    "containership.api": "^0.2.0",
+    "containership.cli": "^0.2.1",
+    "containership.core": "^0.2.0",
     "containership.scheduler": "^0.1.0",
     "daemon": "^1.1.0",
     "lodash": "^2.4.1",

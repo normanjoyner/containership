@@ -3,8 +3,8 @@
   "version": "0.1.2",
   "dependencies": {
     "containership.api": {
-      "version": "0.1.0",
-      "from": "containership.api@",
+      "version": "0.2.0",
+      "from": "containership.api@^0.2.0",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -137,7 +137,8 @@
             },
             "escape-html": {
               "version": "1.0.1",
-              "from": "escape-html@1.0.1"
+              "from": "escape-html@1.0.1",
+              "resolved": "https://registry.npmjs.org/escape-html/-/escape-html-1.0.1.tgz"
             },
             "etag": {
               "version": "1.5.1",
@@ -226,7 +227,8 @@
               "dependencies": {
                 "destroy": {
                   "version": "1.0.3",
-                  "from": "destroy@1.0.3"
+                  "from": "destroy@1.0.3",
+                  "resolved": "https://registry.npmjs.org/destroy/-/destroy-1.0.3.tgz"
                 },
                 "mime": {
                   "version": "1.2.11",
@@ -281,15 +283,16 @@
             },
             "utils-merge": {
               "version": "1.0.0",
-              "from": "utils-merge@1.0.0"
+              "from": "utils-merge@1.0.0",
+              "resolved": "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.0.tgz"
             }
           }
         }
       }
     },
     "containership.cli": {
-      "version": "0.1.0",
-      "from": "containership.cli@",
+      "version": "0.2.1",
+      "from": "containership.cli@^0.2.1",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1161,8 +1164,8 @@
       }
     },
     "containership.core": {
-      "version": "0.1.1",
-      "from": "containership.core@^0.1.1",
+      "version": "0.2.0",
+      "from": "containership.core@^0.2.0",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1191,7 +1194,7 @@
             },
             "media-typer": {
               "version": "0.3.0",
-              "from": "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz",
+              "from": "media-typer@0.3.0",
               "resolved": "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
             },
             "on-finished": {
@@ -1238,8 +1241,9 @@
           }
         },
         "praetor": {
-          "version": "0.0.6",
-          "from": "praetor@0.0.6",
+          "version": "0.0.7",
+          "from": "praetor@0.0.7",
+          "resolved": "https://registry.npmjs.org/praetor/-/praetor-0.0.7.tgz",
           "dependencies": {
             "eventemitter2": {
               "version": "0.4.14",
@@ -1628,7 +1632,7 @@
     },
     "containership.scheduler": {
       "version": "0.1.0",
-      "from": "containership.scheduler@",
+      "from": "containership.scheduler@^0.1.0",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1754,8 +1758,7 @@
                       "dependencies": {
                         "wordwrap": {
                           "version": "0.0.2",
-                          "from": "wordwrap@0.0.2",
-                          "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
+                          "from": "wordwrap@0.0.2"
                         },
                         "minimist": {
                           "version": "0.0.10",
@@ -1811,13 +1814,11 @@
               "dependencies": {
                 "lru-cache": {
                   "version": "2.5.0",
-                  "from": "lru-cache@2.5.0",
-                  "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.5.0.tgz"
+                  "from": "lru-cache@2.5.0"
                 },
                 "sigmund": {
                   "version": "1.0.0",
-                  "from": "sigmund@1.0.0",
-                  "resolved": "https://registry.npmjs.org/sigmund/-/sigmund-1.0.0.tgz"
+                  "from": "sigmund@1.0.0"
                 }
               }
             },
@@ -1838,8 +1839,7 @@
                       "dependencies": {
                         "wordwrap": {
                           "version": "0.0.2",
-                          "from": "wordwrap@0.0.2",
-                          "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
+                          "from": "wordwrap@0.0.2"
                         }
                       }
                     }
