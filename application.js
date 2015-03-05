@@ -8,10 +8,11 @@ var Core = require("containership.core");
 var Scheduler = require("containership.scheduler");
 var API = require("containership.api");
 var daemon = require("daemon");
+var mkdirp = require("mkdirp");
 var utils = require([__dirname, "utils"].join("/"));
 
 try{
-    fs.mkdirSync([process.env["HOME"], ".containership"].join("/"));
+    mkdirp.sync([process.env["HOME"], ".containership", "plugins", "node_modules"].join("/"));
 }
 catch(e){}
 

@@ -1917,6 +1917,18 @@
       "from": "lodash@^2.4.1",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.1.tgz"
     },
+    "mkdirp": {
+      "version": "0.5.0",
+      "from": "mkdirp@",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+      "dependencies": {
+        "minimist": {
+          "version": "0.0.8",
+          "from": "minimist@0.0.8",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
+        }
+      }
+    },
     "nomnom": {
       "version": "1.8.1",
       "from": "nomnom@^1.8.1",
