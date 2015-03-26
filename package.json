@@ -1,6 +1,6 @@
 {
   "name": "containership",
-  "version": "0.1.5-rc.2",
+  "version": "0.1.5-rc.3",
   "description": "A simple, distributed container management platform",
   "main": "application.js",
   "scripts": {
@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/growbrosops/containership",
   "dependencies": {
-    "containership.api": "^0.2.0",
+    "containership.api": "^0.2.1",
     "containership.cli": "^0.2.2",
-    "containership.core": "^0.2.2",
+    "containership.core": "^0.2.3",
     "containership.scheduler": "^0.1.2",
     "daemon": "^1.1.0",
     "lodash": "^2.4.1",

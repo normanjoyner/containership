@@ -1,10 +1,10 @@
 {
   "name": "containership",
-  "version": "0.1.5-rc.2",
+  "version": "0.1.5-rc.3",
   "dependencies": {
     "containership.api": {
-      "version": "0.2.0",
-      "from": "containership.api@^0.2.0",
+      "version": "0.2.1",
+      "from": "containership.api@^0.2.1",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -169,7 +169,8 @@
             },
             "methods": {
               "version": "1.1.0",
-              "from": "methods@1.1.0"
+              "from": "methods@1.1.0",
+              "resolved": "https://registry.npmjs.org/methods/-/methods-1.1.0.tgz"
             },
             "on-finished": {
               "version": "2.1.1",
@@ -1164,8 +1165,8 @@
       }
     },
     "containership.core": {
-      "version": "0.2.2",
-      "from": "containership.core@^0.2.2",
+      "version": "0.2.3",
+      "from": "containership.core@^0.2.3",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1241,8 +1242,8 @@
           }
         },
         "praetor": {
-          "version": "0.0.8",
-          "from": "praetor@0.0.8",
+          "version": "0.0.9",
+          "from": "praetor@0.0.9",
           "dependencies": {
             "eventemitter2": {
               "version": "0.4.14",
