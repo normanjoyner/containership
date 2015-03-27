@@ -1,10 +1,10 @@
 {
   "name": "containership",
-  "version": "0.1.5-rc.3",
+  "version": "0.1.5-rc.4",
   "dependencies": {
     "containership.api": {
-      "version": "0.2.1",
-      "from": "containership.api@^0.2.1",
+      "version": "0.2.2",
+      "from": "containership.api@^0.2.2",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1165,8 +1165,8 @@
       }
     },
     "containership.core": {
-      "version": "0.2.3",
-      "from": "containership.core@^0.2.3",
+      "version": "0.2.5",
+      "from": "containership.core@^0.2.5",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1242,8 +1242,8 @@
           }
         },
         "praetor": {
-          "version": "0.0.9",
-          "from": "praetor@0.0.9",
+          "version": "0.0.10",
+          "from": "praetor@0.0.10",
           "dependencies": {
             "eventemitter2": {
               "version": "0.4.14",
@@ -1251,9 +1251,9 @@
               "resolved": "https://registry.npmjs.org/eventemitter2/-/eventemitter2-0.4.14.tgz"
             },
             "legiond": {
-              "version": "0.0.2",
-              "from": "https://registry.npmjs.org/legiond/-/legiond-0.0.2.tgz",
-              "resolved": "https://registry.npmjs.org/legiond/-/legiond-0.0.2.tgz",
+              "version": "0.0.3",
+              "from": "https://registry.npmjs.org/legiond/-/legiond-0.0.3.tgz",
+              "resolved": "https://registry.npmjs.org/legiond/-/legiond-0.0.3.tgz",
               "dependencies": {
                 "async": {
                   "version": "0.9.0",
