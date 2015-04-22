@@ -3,8 +3,8 @@
   "version": "0.2.0-rc.1",
   "dependencies": {
     "containership.api": {
-      "version": "0.2.4",
-      "from": "containership.api@^0.2.4",
+      "version": "0.2.5",
+      "from": "containership.api@^0.2.5",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1165,8 +1165,8 @@
       }
     },
     "containership.core": {
-      "version": "0.2.7",
-      "from": "containership.core@^0.2.7",
+      "version": "0.2.8",
+      "from": "containership.core@^0.2.8",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1180,7 +1180,7 @@
           "dependencies": {
             "bytes": {
               "version": "1.0.0",
-              "from": "https://registry.npmjs.org/bytes/-/bytes-1.0.0.tgz",
+              "from": "bytes@1.0.0",
               "resolved": "https://registry.npmjs.org/bytes/-/bytes-1.0.0.tgz"
             },
             "depd": {
@@ -1631,8 +1631,8 @@
       }
     },
     "containership.scheduler": {
-      "version": "0.1.5",
-      "from": "containership.scheduler@^0.1.5",
+      "version": "0.1.6",
+      "from": "containership.scheduler@^0.1.6",
       "dependencies": {
         "async": {
           "version": "0.9.0",
