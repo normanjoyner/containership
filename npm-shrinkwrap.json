@@ -3,8 +3,8 @@
   "version": "0.2.0-rc.1",
   "dependencies": {
     "containership.api": {
-      "version": "0.2.5",
-      "from": "containership.api@^0.2.5",
+      "version": "0.2.6",
+      "from": "containership.api@^0.2.6",
       "dependencies": {
         "async": {
           "version": "0.9.0",
