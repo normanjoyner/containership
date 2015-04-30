@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ContianerShip Developers <developers@containership.io>",
+  "author": "ContainerShip Developers <developers@containership.io>",
   "license": "GPL-3.0",
   "keywords": [
     "simple",
@@ -20,12 +20,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/growbrosops/containership.git"
+    "url": "https://github.com/containership/containership.git"
   },
   "bugs": {
-    "url": "https://github.com/growbrosops/containership/issues"
+    "url": "https://github.com/containership/containership/issues"
   },
-  "homepage": "https://github.com/growbrosops/containership",
+  "homepage": "https://github.com/containership/containership",
   "dependencies": {
     "containership.api": "^0.2.6",
     "containership.cli": "^0.2.2",
