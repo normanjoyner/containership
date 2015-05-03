@@ -12,7 +12,7 @@ A simple, distributed container management platform
 ContainerShip Developers - developers@containership.io
 
 ##Getting Started
-Full documentation can be found on our [official website](http://containership.io/docs).
+Full documentation can be found on our [official website](https://docs.containership.io).
 
 ##Contributing
 Pull requests and issues are encouraged!
