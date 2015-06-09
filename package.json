@@ -1,6 +1,6 @@
 {
   "name": "containership",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple container management platform",
   "main": "application.js",
   "scripts": {
@@ -29,7 +29,7 @@
   "dependencies": {
     "containership.api": "^0.2.6",
     "containership.cli": "^0.2.3",
-    "containership.core": "^0.2.8",
+    "containership.core": "^0.2.9",
     "containership.scheduler": "^0.1.8",
     "daemon": "^1.1.0",
     "lodash": "^2.4.1",
