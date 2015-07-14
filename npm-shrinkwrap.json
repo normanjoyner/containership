@@ -1,6 +1,6 @@
 {
   "name": "containership",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "dependencies": {
     "containership.api": {
       "version": "0.2.6",
@@ -1168,7 +1168,7 @@
     },
     "containership.core": {
       "version": "0.2.9",
-      "from": "containership.core@0.2.9",
+      "from": "https://registry.npmjs.org/containership.core/-/containership.core-0.2.9.tgz",
       "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-0.2.9.tgz",
       "dependencies": {
         "async": {
@@ -1636,7 +1636,8 @@
     },
     "containership.scheduler": {
       "version": "0.1.10",
-      "from": "containership.scheduler@^0.1.10",
+      "from": "containership.scheduler@0.1.10",
+      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-0.1.10.tgz",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1655,7 +1656,7 @@
               "dependencies": {
                 "debug": {
                   "version": "0.7.4",
-                  "from": "debug@0.7.4",
+                  "from": "https://registry.npmjs.org/debug/-/debug-0.7.4.tgz",
                   "resolved": "https://registry.npmjs.org/debug/-/debug-0.7.4.tgz"
                 },
                 "follow-redirects": {
@@ -1748,7 +1749,7 @@
                   "dependencies": {
                     "async": {
                       "version": "0.2.9",
-                      "from": "async@0.2.9",
+                      "from": "https://registry.npmjs.org/async/-/async-0.2.9.tgz",
                       "resolved": "https://registry.npmjs.org/async/-/async-0.2.9.tgz"
                     },
                     "ini": {
@@ -1758,17 +1759,17 @@
                     },
                     "optimist": {
                       "version": "0.6.0",
-                      "from": "optimist@0.6.0",
+                      "from": "https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz",
                       "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz",
                       "dependencies": {
                         "wordwrap": {
                           "version": "0.0.2",
-                          "from": "wordwrap@0.0.2",
+                          "from": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz",
                           "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
                         },
                         "minimist": {
                           "version": "0.0.10",
-                          "from": "minimist@0.0.10",
+                          "from": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz",
                           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz"
                         }
                       }
@@ -1816,39 +1817,39 @@
             },
             "minimatch": {
               "version": "1.0.0",
-              "from": "minimatch@1.0.0",
+              "from": "https://registry.npmjs.org/minimatch/-/minimatch-1.0.0.tgz",
               "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-1.0.0.tgz",
               "dependencies": {
                 "lru-cache": {
                   "version": "2.5.0",
-                  "from": "lru-cache@2.5.0",
+                  "from": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.5.0.tgz",
                   "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.5.0.tgz"
                 },
                 "sigmund": {
                   "version": "1.0.0",
-                  "from": "sigmund@1.0.0",
+                  "from": "https://registry.npmjs.org/sigmund/-/sigmund-1.0.0.tgz",
                   "resolved": "https://registry.npmjs.org/sigmund/-/sigmund-1.0.0.tgz"
                 }
               }
             },
             "ps-tree": {
               "version": "0.0.3",
-              "from": "ps-tree@0.0.3",
+              "from": "https://registry.npmjs.org/ps-tree/-/ps-tree-0.0.3.tgz",
               "resolved": "https://registry.npmjs.org/ps-tree/-/ps-tree-0.0.3.tgz",
               "dependencies": {
                 "event-stream": {
                   "version": "0.5.3",
-                  "from": "event-stream@0.5.3",
+                  "from": "https://registry.npmjs.org/event-stream/-/event-stream-0.5.3.tgz",
                   "resolved": "https://registry.npmjs.org/event-stream/-/event-stream-0.5.3.tgz",
                   "dependencies": {
                     "optimist": {
                       "version": "0.2.8",
-                      "from": "optimist@0.2.8",
+                      "from": "https://registry.npmjs.org/optimist/-/optimist-0.2.8.tgz",
                       "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.2.8.tgz",
                       "dependencies": {
                         "wordwrap": {
                           "version": "0.0.2",
-                          "from": "wordwrap@0.0.2",
+                          "from": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz",
                           "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
                         }
                       }
@@ -1864,7 +1865,7 @@
               "dependencies": {
                 "minimist": {
                   "version": "1.1.0",
-                  "from": "minimist@1.1.0",
+                  "from": "https://registry.npmjs.org/minimist/-/minimist-1.1.0.tgz",
                   "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.1.0.tgz"
                 }
               }
@@ -1896,7 +1897,7 @@
                 },
                 "rimraf": {
                   "version": "2.2.8",
-                  "from": "rimraf@2.2.8",
+                  "from": "https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz",
                   "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.2.8.tgz"
                 }
               }
