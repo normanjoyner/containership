@@ -13,6 +13,9 @@ RUN n 0.10.38
 WORKDIR /app
 ADD . /app
 
+# set default NODE_ENV=development
+ENV NODE_ENV development
+
 # install dependencies
 RUN npm install
 
