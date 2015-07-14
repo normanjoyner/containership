@@ -27,13 +27,17 @@ var core = new Core({
 var commands = {
     agent: {
         init: function(options){
-            if(process.env.NODE_ENV != "development")
-                daemon();
+            if(process.env.NODE_ENV != "development"){
+                daemon({
+                    stdout: process.stdout,
+                    stderr: process.stderr
+                });
+            }
 
             var pid_location = "/var/run/containership.pid";
             fs.writeFile(pid_location, process.pid, function(err){
                 if(err){
-                    process.stderr.write("Error writing PID!");
+                    process.stderr.write("Error writing PID! Are you running containership as root?\n");
                     process.exit(1);
                 }
                 else{
