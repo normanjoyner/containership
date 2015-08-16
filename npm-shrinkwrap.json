@@ -1,11 +1,10 @@
 {
   "name": "containership",
-  "version": "0.2.4",
+  "version": "0.2.5-rc.0",
   "dependencies": {
     "containership.api": {
-      "version": "0.2.6",
-      "from": "https://registry.npmjs.org/containership.api/-/containership.api-0.2.6.tgz",
-      "resolved": "https://registry.npmjs.org/containership.api/-/containership.api-0.2.6.tgz",
+      "version": "0.2.7",
+      "from": "containership.api@^0.2.7",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1167,9 +1166,8 @@
       }
     },
     "containership.core": {
-      "version": "0.2.9",
-      "from": "https://registry.npmjs.org/containership.core/-/containership.core-0.2.9.tgz",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-0.2.9.tgz",
+      "version": "0.2.10",
+      "from": "containership.core@^0.2.10",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1635,9 +1633,8 @@
       }
     },
     "containership.scheduler": {
-      "version": "0.1.10",
-      "from": "containership.scheduler@0.1.10",
-      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-0.1.10.tgz",
+      "version": "0.1.12",
+      "from": "containership.scheduler@^0.1.12",
       "dependencies": {
         "async": {
           "version": "0.9.0",
