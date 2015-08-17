@@ -1166,8 +1166,8 @@
       }
     },
     "containership.core": {
-      "version": "0.2.10",
-      "from": "containership.core@^0.2.10",
+      "version": "0.2.11",
+      "from": "containership.core@^0.2.11",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1633,8 +1633,8 @@
       }
     },
     "containership.scheduler": {
-      "version": "0.1.12",
-      "from": "containership.scheduler@^0.1.12",
+      "version": "0.1.13",
+      "from": "containership.scheduler@^0.1.13",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1642,14 +1642,14 @@
           "resolved": "https://registry.npmjs.org/async/-/async-0.9.0.tgz"
         },
         "dockerode": {
-          "version": "2.0.6",
-          "from": "https://registry.npmjs.org/dockerode/-/dockerode-2.0.6.tgz",
-          "resolved": "https://registry.npmjs.org/dockerode/-/dockerode-2.0.6.tgz",
+          "version": "2.2.2",
+          "from": "https://registry.npmjs.org/dockerode/-/dockerode-2.2.2.tgz",
+          "resolved": "https://registry.npmjs.org/dockerode/-/dockerode-2.2.2.tgz",
           "dependencies": {
             "docker-modem": {
-              "version": "0.1.22",
-              "from": "https://registry.npmjs.org/docker-modem/-/docker-modem-0.1.22.tgz",
-              "resolved": "https://registry.npmjs.org/docker-modem/-/docker-modem-0.1.22.tgz",
+              "version": "0.2.6",
+              "from": "https://registry.npmjs.org/docker-modem/-/docker-modem-0.2.6.tgz",
+              "resolved": "https://registry.npmjs.org/docker-modem/-/docker-modem-0.2.6.tgz",
               "dependencies": {
                 "debug": {
                   "version": "0.7.4",
@@ -1659,7 +1659,31 @@
                 "follow-redirects": {
                   "version": "0.0.3",
                   "from": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-0.0.3.tgz",
-                  "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-0.0.3.tgz"
+                  "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-0.0.3.tgz",
+                  "dependencies": {
+                    "underscore": {
+                      "version": "1.8.3",
+                      "from": "https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz",
+                      "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz"
+                    }
+                  }
+                },
+                "JSONStream": {
+                  "version": "0.10.0",
+                  "from": "https://registry.npmjs.org/JSONStream/-/JSONStream-0.10.0.tgz",
+                  "resolved": "https://registry.npmjs.org/JSONStream/-/JSONStream-0.10.0.tgz",
+                  "dependencies": {
+                    "jsonparse": {
+                      "version": "0.0.5",
+                      "from": "https://registry.npmjs.org/jsonparse/-/jsonparse-0.0.5.tgz",
+                      "resolved": "https://registry.npmjs.org/jsonparse/-/jsonparse-0.0.5.tgz"
+                    },
+                    "through": {
+                      "version": "2.3.8",
+                      "from": "https://registry.npmjs.org/through/-/through-2.3.8.tgz",
+                      "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz"
+                    }
+                  }
                 },
                 "querystring": {
                   "version": "0.2.0",
@@ -1694,11 +1718,6 @@
                   }
                 }
               }
-            },
-            "underscore": {
-              "version": "1.5.2",
-              "from": "https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz",
-              "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz"
             }
           }
         },
