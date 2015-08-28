@@ -1166,8 +1166,8 @@
       }
     },
     "containership.core": {
-      "version": "1.0.0-rc.0",
-      "from": "containership.core@^1.0.0-rc.0",
+      "version": "1.0.0-rc.1",
+      "from": "containership.core@^1.0.0-rc.1",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1289,8 +1289,8 @@
           "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz"
         },
         "myriad-kv": {
-          "version": "0.0.3",
-          "from": "myriad-kv@0.0.3",
+          "version": "0.0.4",
+          "from": "myriad-kv@0.0.4",
           "dependencies": {
             "async": {
               "version": "1.0.0",
@@ -1897,8 +1897,8 @@
       }
     },
     "containership.scheduler": {
-      "version": "1.0.0-rc.0",
-      "from": "containership.scheduler@^1.0.0-rc.0",
+      "version": "1.0.0-rc.1",
+      "from": "containership.scheduler@^1.0.0-rc.1",
       "dependencies": {
         "async": {
           "version": "0.9.0",
