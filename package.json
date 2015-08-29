@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/containership/containership",
   "dependencies": {
-    "containership.api": "^1.0.0-rc.1",
+    "containership.api": "^1.0.0-rc.2",
     "containership.cli": "^0.2.3",
-    "containership.core": "^1.0.0-rc.1",
+    "containership.core": "^1.0.0-rc.2",
     "containership.scheduler": "^1.0.0-rc.1",
     "daemon": "^1.1.0",
     "lodash": "^2.4.1",
