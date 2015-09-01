@@ -1,6 +1,6 @@
 {
   "name": "containership",
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0",
   "dependencies": {
     "containership.api": {
       "version": "1.0.0",
