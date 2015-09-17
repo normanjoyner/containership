@@ -4,7 +4,8 @@
   "description": "A simple container management platform",
   "main": "application.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/containership.analytics segment"
   },
   "author": "ContainerShip Developers <developers@containership.io>",
   "license": "GPL-3.0",
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/containership/containership",
   "dependencies": {
-    "containership.analytics": "^0.1.0",
+    "containership.analytics": "^0.1.1",
     "containership.api": "^1.0.1",
     "containership.cli": "^0.2.3",
     "containership.core": "^1.0.5",
