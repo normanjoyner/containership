@@ -1,6 +1,6 @@
 {
   "name": "containership",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "dependencies": {
     "containership.analytics": {
       "version": "0.1.1",
