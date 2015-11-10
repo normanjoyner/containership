@@ -40,6 +40,7 @@
   },
   "devDependencies": {},
   "bin": {
-    "containership": "./application.js"
+    "containership": "./application.js",
+    "cs": "./application.js"
   }
 }
