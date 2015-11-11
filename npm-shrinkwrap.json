@@ -7,8 +7,8 @@
       "from": "containership.analytics@^0.1.3"
     },
     "containership.api": {
-      "version": "1.0.2",
-      "from": "containership.api@^1.0.2",
+      "version": "1.1.0",
+      "from": "containership.api@^1.1.0",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -296,9 +296,8 @@
       }
     },
     "containership.cli": {
-      "version": "0.2.3",
-      "from": "https://registry.npmjs.org/containership.cli/-/containership.cli-0.2.3.tgz",
-      "resolved": "https://registry.npmjs.org/containership.cli/-/containership.cli-0.2.3.tgz",
+      "version": "0.3.0",
+      "from": "containership.cli@^0.3.0",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1170,8 +1169,8 @@
       }
     },
     "containership.core": {
-      "version": "1.1.2",
-      "from": "containership.core@^1.1.2",
+      "version": "1.2.0",
+      "from": "containership.core@^1.2.0",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1293,8 +1292,8 @@
           "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz"
         },
         "myriad-kv": {
-          "version": "0.1.1",
-          "from": "myriad-kv@0.1.1",
+          "version": "0.2.0",
+          "from": "myriad-kv@0.2.0",
           "dependencies": {
             "async": {
               "version": "1.0.0",
@@ -1901,8 +1900,8 @@
       }
     },
     "containership.scheduler": {
-      "version": "1.1.1",
-      "from": "containership.scheduler@^1.1.1",
+      "version": "1.2.0",
+      "from": "containership.scheduler@^1.2.0",
       "dependencies": {
         "async": {
           "version": "0.9.0",
