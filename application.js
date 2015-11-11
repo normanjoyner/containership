@@ -58,7 +58,6 @@ var commands = {
 var cli = new CLI();
 _.merge(commands, cli.commands);
 
-nomnom.script(pkg.name);
 nomnom.option("version", {
     flag: true,
     abbr: "v",
@@ -78,4 +77,11 @@ _.each(commands, function(command, name){
     nomnom.command(name).options(command.options).callback(command.init);
 });
 
-nomnom.parse(utils.parse_env_vars(core));
+if(_.has(commands, process.argv[2]) && _.has(commands[process.argv[2]], "nomnom")){
+    nomnom = commands[process.argv[2]].nomnom;
+    var args = utils.parse_env_vars(core).slice(1);
+}
+else
+    var args = utils.parse_env_vars(core);
+
+nomnom.parse(args);
