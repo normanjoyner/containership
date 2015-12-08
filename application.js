@@ -74,8 +74,8 @@ _.each(available_commands, function(command){
 });
 
 _.each(commands, function(command, name){
-    if(_.has(command, "middleware"))
-        cli.set_middleware(command.middleware);
+//    if(_.has(command, "middleware"))
+//        cli.set_middleware(command.middleware);
 
     nomnom.command(name).options(command.options).callback(command.init);
 });
