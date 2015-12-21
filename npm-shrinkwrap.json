@@ -1169,8 +1169,8 @@
       }
     },
     "containership.core": {
-      "version": "1.4.0",
-      "from": "containership.core@^1.4.0",
+      "version": "1.4.1",
+      "from": "containership.core@^1.4.1",
       "dependencies": {
         "async": {
           "version": "0.8.0",
