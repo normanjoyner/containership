@@ -3,6 +3,9 @@ containership
 
 ##About
 
+###Build Status
+[![Build Status](https://drone.containership.io/api/badges/containership/containership/status.svg)](https://drone.containership.io/containership/containership)
+
 ###Description
 ContainerShip is an open source container management platform which aims to be the simplest way to run containers from dev to production. ContainerShip provides all the necessary pieces to your infrastructure including loadbalancing, service-discovery and DNS in a single package. Extending the core functionality is easy through the use of plugins. Find more detailed docs below!
 
