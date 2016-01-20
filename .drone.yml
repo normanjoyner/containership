@@ -17,3 +17,11 @@ publish:
     email: "$$NPM_EMAIL"
     when:
       event: tag
+  docker:
+    username: "$$DOCKERHUB_USERNAME"
+    password: "$$DOCKERHUB_PASSWORD"
+    email: "$$DOCKERHUB_EMAIL"
+    repo: containership/containership
+    tag: $$TAG
+    when:
+      event: tag
