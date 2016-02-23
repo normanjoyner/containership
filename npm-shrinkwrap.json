@@ -1269,9 +1269,9 @@
       }
     },
     "containership.core": {
-      "version": "1.4.5",
-      "from": "containership.core@^1.4.5",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.4.5.tgz",
+      "version": "1.4.6",
+      "from": "containership.core@^1.4.6",
+      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.4.6.tgz",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1620,9 +1620,9 @@
           "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz"
         },
         "myriad-kv": {
-          "version": "0.2.3",
-          "from": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.2.3.tgz",
-          "resolved": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.2.3.tgz",
+          "version": "0.2.4",
+          "from": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.2.4.tgz",
+          "resolved": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.2.4.tgz",
           "dependencies": {
             "async": {
               "version": "1.0.0",
@@ -1752,11 +1752,6 @@
                   "resolved": "https://registry.npmjs.org/nan/-/nan-1.8.4.tgz"
                 }
               }
-            },
-            "object-sizeof": {
-              "version": "1.0.6",
-              "from": "https://registry.npmjs.org/object-sizeof/-/object-sizeof-1.0.6.tgz",
-              "resolved": "https://registry.npmjs.org/object-sizeof/-/object-sizeof-1.0.6.tgz"
             },
             "praetor": {
               "version": "0.1.11",
