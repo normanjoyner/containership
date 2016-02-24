@@ -2337,8 +2337,9 @@
       }
     },
     "containership.scheduler": {
-      "version": "1.4.8",
-      "from": "containership.scheduler@^1.4.8",
+      "version": "1.4.10",
+      "from": "containership.scheduler@^1.4.10",
+      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-1.4.10.tgz",
       "dependencies": {
         "async": {
           "version": "0.9.0",
