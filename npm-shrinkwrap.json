@@ -1,6 +1,6 @@
 {
   "name": "containership",
-  "version": "1.3.0-rc.25",
+  "version": "1.3.0-rc.26",
   "dependencies": {
     "ansi": {
       "version": "0.3.1",
