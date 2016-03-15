@@ -21,7 +21,7 @@ This repository is a minimal wrapper around various other official ContainerShip
 * [`containership.core`](https://github.com/containership/containership.core) - core containership functionality
 * [`containership.scheduler`](https://github.com/containership/containership.scheduler) - default containership scheduler
 * [`legiond`](https://github.com/containership/legiond) - secure distributed event layer for nodejs applications
-* [`myriad`](https://github.com/containership/myriad) - distributed key-value store built on top of praetor and legiond
+* [`myriad-kv`](https://github.com/containership/myriad-kv) - distributed key-value store built on top of praetor and legiond
 * [`praetor`](https://github.com/containership/praetor) - leader election framework built atop LegionD
 * [`quarry`](https://github.com/containership/quarry) - rock solid, dynamic DNS server with swappable backends and API
 
