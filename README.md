@@ -13,7 +13,7 @@ ContainerShip is an open source container management platform which aims to be t
 ContainerShip Developers - developers@containership.io
 
 ### Repository Structure
-This repository is a minimal wrapper around various other official ContainerShip repositories:
+This repository is a minimal wrapper around various other official ContainerShip repositories which comprise the full containership package:
 
 * [`codexd`](https://github.com/containership/codexd) - filesystem snapshotting and replication built atop legiond
 * [`containership.api`](https://github.com/containership/containership.api) - containership leader API
@@ -26,7 +26,7 @@ This repository is a minimal wrapper around various other official ContainerShip
 * [`quarry`](https://github.com/containership/quarry) - rock solid, dynamic DNS server with swappable backends and API
 
 ### Plugins
-The containership plugin system allows for the core of containership to be overridden by third party plugins. Below is a few official plugins created by ContainerShip:
+The containership plugin system allows for the core of containership to be overridden by third party plugins. Below are a few official plugins created by ContainerShip:
 
 * [`cloud-hints`](https://github.com/containership/containership.plugin.cloud-hints) - automatically set cloud metadata in the form of host tags
 * [`logs`](https://github.com/containership/containership.plugin.logs) - application log aggregator
