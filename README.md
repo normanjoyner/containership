@@ -1,3 +1,5 @@
+![containership logo](http://content.containership.io/hubfs/containership_logo_3.png)
+
 containership
 ==============
 
