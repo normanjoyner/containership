@@ -31,9 +31,10 @@ This repository is a minimal wrapper around various other official ContainerShip
 The containership plugin system allows for the core of containership to be overridden by third party plugins. Below are a few official plugins created by ContainerShip:
 
 * [`cloud-hints`](https://github.com/containership/containership.plugin.cloud-hints) - automatically set cloud metadata in the form of host tags
+* [`firewall`](https://github.com/containership/containership.plugin.firewall) - firewall plugin for containership
 * [`logs`](https://github.com/containership/containership.plugin.logs) - application log aggregator
 * [`navigator`](https://github.com/containership/containership.plugin.navigator) - web-ui for managing your containership clusters
-* [`service-discovery`](https://github.com/containership/containership.plugin.service-discovery) service discovery plugin for Containership
+* [`service-discovery`](https://github.com/containership/containership.plugin.service-discovery) service discovery plugin for containership
 * [`tide`](https://github.com/containership/containership.plugin.tide) - cron-like job scheduler
 
 ## Getting Started
