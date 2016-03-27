@@ -30,6 +30,7 @@ This repository is a minimal wrapper around various other official ContainerShip
 ### Plugins
 The containership plugin system allows for the core of containership to be overridden by third party plugins. Below are a few official plugins created by ContainerShip:
 
+* [`cloud`](https://github.com/containership/containership.plugin.cloud) - connects cluster to SaaS ContainerShip Cloud product for easier management, cluster backups, etc
 * [`cloud-hints`](https://github.com/containership/containership.plugin.cloud-hints) - automatically set cloud metadata in the form of host tags
 * [`firewall`](https://github.com/containership/containership.plugin.firewall) - firewall plugin for containership
 * [`logs`](https://github.com/containership/containership.plugin.logs) - application log aggregator
