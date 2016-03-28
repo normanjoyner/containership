@@ -14,6 +14,9 @@ ContainerShip is an open source container management platform which aims to be t
 ### Author
 ContainerShip Developers - developers@containership.io
 
+### Introduction
+[![Intro to containership](https://asciinema.org/a/40576.png)](https://asciinema.org/a/40576)
+
 ### Repository Structure
 This repository is a minimal wrapper around various other official ContainerShip repositories which comprise the full containership package:
 
