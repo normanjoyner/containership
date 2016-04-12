@@ -296,9 +296,9 @@
       }
     },
     "containership.cli": {
-      "version": "1.0.4",
-      "from": "https://registry.npmjs.org/containership.cli/-/containership.cli-1.0.4.tgz",
-      "resolved": "https://registry.npmjs.org/containership.cli/-/containership.cli-1.0.4.tgz",
+      "version": "1.0.5",
+      "from": "containership.cli@>=1.0.5 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.cli/-/containership.cli-1.0.5.tgz",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1824,15 +1824,15 @@
                 }
               }
             },
-            "base64-js": {
-              "version": "0.0.2",
-              "from": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.2.tgz",
-              "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.2.tgz"
-            },
             "bops": {
               "version": "0.0.7",
               "from": "https://registry.npmjs.org/bops/-/bops-0.0.7.tgz",
               "resolved": "https://registry.npmjs.org/bops/-/bops-0.0.7.tgz"
+            },
+            "base64-js": {
+              "version": "0.0.2",
+              "from": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.2.tgz",
+              "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.2.tgz"
             },
             "to-utf8": {
               "version": "0.0.1",
