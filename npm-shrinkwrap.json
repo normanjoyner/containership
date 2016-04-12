@@ -296,9 +296,9 @@
       }
     },
     "containership.cli": {
-      "version": "1.0.4",
-      "from": "https://registry.npmjs.org/containership.cli/-/containership.cli-1.0.4.tgz",
-      "resolved": "https://registry.npmjs.org/containership.cli/-/containership.cli-1.0.4.tgz",
+      "version": "1.0.5",
+      "from": "containership.cli@>=1.0.5 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.cli/-/containership.cli-1.0.5.tgz",
       "dependencies": {
         "async": {
           "version": "0.9.0",
@@ -1250,9 +1250,9 @@
       }
     },
     "containership.core": {
-      "version": "1.4.9",
-      "from": "containership.core@>=1.4.9 <2.0.0",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.4.9.tgz",
+      "version": "1.4.10",
+      "from": "containership.core@>=1.4.10 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.4.10.tgz",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1565,9 +1565,9 @@
           "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz"
         },
         "myriad-kv": {
-          "version": "0.3.0",
-          "from": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.0.tgz",
-          "resolved": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.0.tgz",
+          "version": "0.3.1",
+          "from": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.1.tgz",
+          "resolved": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.1.tgz",
           "dependencies": {
             "async": {
               "version": "1.0.0",
@@ -1687,8 +1687,8 @@
               "resolved": "https://registry.npmjs.org/msgpack-js/-/msgpack-js-0.3.0.tgz"
             },
             "praetor": {
-              "version": "0.1.12",
-              "from": "praetor@0.1.12",
+              "version": "0.1.13",
+              "from": "praetor@0.1.13",
               "dependencies": {
                 "eventemitter2": {
                   "version": "0.4.14",
