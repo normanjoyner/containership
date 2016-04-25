@@ -1472,9 +1472,9 @@
       }
     },
     "containership.core": {
-      "version": "1.5.0",
-      "from": "containership.core@>=1.5.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.5.0.tgz",
+      "version": "1.5.1",
+      "from": "containership.core@>=1.5.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.5.1.tgz",
       "dependencies": {
         "async": {
           "version": "0.8.0",
