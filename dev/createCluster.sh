@@ -10,6 +10,8 @@ NUM_LEADERS="${NUM_LEADERS:-1}"
 LEADERS_MEMORY="${LEADERS_MEMORY:-512}"
 NUM_FOLLOWERS="${NUM_FOLLOWERS:-1}"
 FOLLOWERS_MEMORY="${FOLLOWERS_MEMORY:-2048}"
+VAGRANT_BOX="containership/containership-dev"
+VAGRANT_BOX_VERSION="0.0.1"
 
 # ensure vagrant is installed
 which vagrant > /dev/null
@@ -28,7 +30,8 @@ LAST_OCTET=$((1+${i}))
 cat << EOF >> Vagrantfile
   config.vm.define "leader${i}" do |host|
     host.vm.hostname = "leader${i}"
-    host.vm.box = "package.box"
+    host.vm.box = "$VAGRANT_BOX"
+    host.vm.box_version = "0.0.1"
     host.vm.network "private_network", ip: "${BASE_IP}.${LAST_OCTET}"
     host.vm.synced_folder "$(pwd)/../", "/mnt/containership"
     host.vm.provider "virtualbox" do |vb|
@@ -47,7 +50,8 @@ LAST_OCTET=$((1+$NUM_LEADERS+${i}))
 cat << EOF >> Vagrantfile
   config.vm.define "follower${i}" do |host|
     host.vm.hostname = "follower${i}"
-    host.vm.box = "package.box"
+    host.vm.box = "$VAGRANT_BOX"
+    host.vm.box_version = "0.0.1"
     host.vm.network "private_network", ip: "${BASE_IP}.${LAST_OCTET}"
     host.vm.synced_folder "$(pwd)/../", "/mnt/containership"
     host.vm.provider "virtualbox" do |vb|
