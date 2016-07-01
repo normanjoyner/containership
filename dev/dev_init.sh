@@ -13,6 +13,32 @@ function yn_prompt {
     done
 }
 
+script_arg=$1
+
+case $script_arg in
+    git)
+        git=true
+        ;;
+    npm_install)
+        npm_install=true
+        npm_remove_existing=$2
+        ;;
+    symlink)
+        symlink=true
+        ;;
+    all)
+        all=true
+        ;;
+    *)
+        printf "Please pass either git, npm_install, symlink, or all in as a command.\n\n"
+        printf "git:\n\tWill attempt to clone, fork, and add remotes to all relevant containership repos\n"
+        printf "npm_install:\n\tWill run npm install in all the containership repos.\n\tAdd flag --remove-existing to wipe existing node_modules before installing\n"
+        printf "symlink:\n\tWill attempt to symlink all containership repo node_modules to your corresponding git repo\n"
+        printf "all:\n\tWill execute all of the above commands\n"
+        exit 1
+        ;;
+esac
+
 echo "Initializing the Containership development environment..."
 
 if ! type "brew" > /dev/null; then
@@ -28,14 +54,16 @@ yn_prompt "Would you like to initialize the dev environment in this directory? (
 if [ ! $? -eq 0 ]; then
     read -ep "Where would you like to set up the Containership development environment?`echo $'\n> '`" containership_dir
 fi
-
-echo "Forking and cloning repositories into: [$containership_dir]"
 cd $containership_dir
 
-read -p "What is your github username? " github_user
-while ! yn_prompt "Is [$github_user] correct? [yes/no] "; do
-    read -p "What is your github username?" github_user
-done
+if [ "$all" == true ] || [ "$git" == true ]; then
+    echo "Forking and cloning repositories into: [$containership_dir]"
+
+    read -p "What is your github username? " github_user
+    while ! yn_prompt "Is [$github_user] correct? [yes/no] "; do
+        read -p "What is your github username?" github_user
+    done
+fi
 
 containership_repos=(
     "containership"
@@ -52,33 +80,50 @@ containership_repos=(
 )
 
 for repo in ${containership_repos[@]}; do
-    if [ ! -d "$repo" ]; then
-        echo "Cloning $repo from containership..."
-        git clone git@github.com:containership/$repo.git
+    if [ "$all" == true ] || [ "$git" == true ]; then
+        if [ ! -d "$repo" ]; then
+            echo "Cloning $repo from containership..."
+            git clone git@github.com:containership/$repo.git
+        fi
+
+        echo "Forking $repo (if not already forked) and adding remote..."
+        cd $repo
+
+        if ! git remote -v | grep $github_user > /dev/null; then
+            hub fork
+        fi
+
+        cd $containership_dir
     fi
 
-    echo "Forking (if not already forked) and adding remote..."
-    cd $repo
-    if ! git remote -v | grep $github_user > /dev/null; then
-        hub fork
-    fi
+    if [ "$all" == true ] || [ "$npm_install" == true ]; then
+        cd $repo
 
-    npm install
-    cd ..
+        if [ "$npm_remove_existing" == "--remove-existing" ]; then
+            rm -rf ./node_modules/*
+        fi
+
+        npm install
+        cd $containership_dir
+    fi
 done
 
-for repo in ${containership_repos[@]}; do
-    cd $repo/node_modules
-
-    echo "Attempting to symlink all modules inside: $repo..."
-
+if [ "$all" == true ] || [ "$symlink" == true ]; then
     for repo in ${containership_repos[@]}; do
         if [ -d $repo ]; then
-            echo "Symlinking $repo -> ../../$repo"
-            rm -rf $repo
-            ln -sF ../../$repo $repo
+            cd $repo/node_modules
+
+            echo "Attempting to symlink all modules inside: $repo..."
+
+            for repo in ${containership_repos[@]}; do
+                if [ -d $repo ]; then
+                    echo "Symlinking $repo -> ../../$repo"
+                    rm -rf $repo
+                    ln -sF ../../$repo $repo
+                fi
+            done
+
+            cd $containership_dir
         fi
     done
-
-    cd ../../
-done
+fi
