@@ -4,7 +4,7 @@
   "description": "A simple container management platform",
   "main": "index.js",
   "scripts": {
-    "test": "mohca",
+    "test": "mocha",
     "postinstall": "containership.analytics segment",
     "lint": "eslint ."
   },
