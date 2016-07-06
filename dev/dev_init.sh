@@ -1,5 +1,7 @@
 #!/bin/bash
 
+HUB_CONFIG=~/.config/hub
+
 function yn_prompt {
     local prompt=$1
 
@@ -54,16 +56,9 @@ yn_prompt "Would you like to initialize the dev environment in this directory? (
 if [ ! $? -eq 0 ]; then
     read -ep "Where would you like to set up the Containership development environment?`echo $'\n> '`" containership_dir
 fi
+
 cd $containership_dir
-
-if [ "$all" == true ] || [ "$git" == true ]; then
-    echo "Forking and cloning repositories into: [$containership_dir]"
-
-    read -p "What is your github username? " github_user
-    while ! yn_prompt "Is [$github_user] correct? [yes/no] "; do
-        read -p "What is your github username?" github_user
-    done
-fi
+echo "Forking and cloning repositories into: [$containership_dir]"
 
 containership_repos=(
     "containership"
@@ -83,14 +78,16 @@ for repo in ${containership_repos[@]}; do
     if [ "$all" == true ] || [ "$git" == true ]; then
         if [ ! -d "$repo" ]; then
             echo "Cloning $repo from containership..."
-            git clone git@github.com:containership/$repo.git
+            git clone --origin upstream git@github.com:containership/$repo.git
         fi
 
         echo "Forking $repo (if not already forked) and adding remote..."
         cd $repo
 
         if ! git remote -v | grep $github_user > /dev/null; then
-            hub fork
+            hub fork --no-remote
+            github_user=echo $(grep -o 'user: .*' ~/.config/hub | awk '{print $2}')
+            git remote add origin git@github.com:$github_user/$repo.git
         fi
 
         cd $containership_dir
