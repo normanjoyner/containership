@@ -60,8 +60,9 @@ fi
 cd $containership_dir
 echo "Forking and cloning repositories into: [$containership_dir]"
 
+main_containership_repo="containership"
+
 containership_repos=(
-    "containership"
     "containership.analytics"
     "containership.api"
     "containership.cli"
@@ -74,20 +75,32 @@ containership_repos=(
     "praetor"
 )
 
+# main containership repo
+if [ ! -d $main_containership_repo ]; then
+    git clone git@github.com:containership/containership.git
+fi
+
+cd $main_containership_repo
+hub fork
+github_user=$(echo $(grep -o 'user: .*' ~/.config/hub | awk '{print $2}'))
+git remote rename origin upstream
+git remote rename $github_user origin
+cd $containership_dir
+
 for repo in ${containership_repos[@]}; do
     if [ "$all" == true ] || [ "$git" == true ]; then
         if [ ! -d "$repo" ]; then
             echo "Cloning $repo from containership..."
-            git clone --origin upstream git@github.com:containership/$repo.git
+            git clone git@github.com:containership/$repo.git
         fi
 
         echo "Forking $repo (if not already forked) and adding remote..."
         cd $repo
 
         if ! git remote -v | grep $github_user > /dev/null; then
-            hub fork --no-remote
-            github_user=echo $(grep -o 'user: .*' ~/.config/hub | awk '{print $2}')
-            git remote add origin git@github.com:$github_user/$repo.git
+            hub fork
+            git remote rename origin upstream
+            git remote rename $github_user origin
         fi
 
         cd $containership_dir
