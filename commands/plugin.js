@@ -1,7 +1,7 @@
 'use strict';
 
-const config = require('./../lib/config');
-const utils = require('./../lib/utils');
+const config = require('../lib/config');
+const utils = require('../lib/utils');
 
 const fs = require('fs');
 const _ = require('lodash');
@@ -19,7 +19,8 @@ module.exports = {
         try {
             mkdirp.sync(`${PLUGINS_DIR}/node_modules`);
         } catch(err) {
-            // process.stderr.write(err.message);
+            process.stderr.write(err.message);
+            process.exit(1);
         }
 
 
@@ -39,8 +40,9 @@ module.exports = {
 
                                 try {
                                     _.forEach(data.dependencies, (plugin, name) => {
-                                        if(name.indexOf('containership.plugin.') === 0)
+                                        if(name.indexOf('containership.plugin.') === 0) {
                                             name = name.substring(21, name.length);
+                                        }
 
                                         utils.println([ ['%-40s', name], ['%-20s', plugin.version] ]);
                                     });
@@ -69,12 +71,6 @@ module.exports = {
                         request({ url: 'http://plugins.containership.io', json: true }, (err, response) => {
                             if(!err && response.statusCode === 200) {
                                 authorized_plugins = response.body;
-                            }
-
-                            try {
-                                fs.mkdirSync(PLUGINS_DIR);
-                            } catch(err) {
-                                // process.stderr.write(err.message);
                             }
 
                             npm.load({
@@ -153,12 +149,6 @@ module.exports = {
                                 authorized_plugins = response.body;
                             }
 
-                            try {
-                                fs.mkdirSync(PLUGINS_DIR);
-                            } catch(err) {
-                                // process.stderr.write(err.message);
-                            }
-
                             process.stdout.write(`Installing plugin(s): ${options.plugin.join(', ')}\n`);
 
                             npm.load({
@@ -202,12 +192,6 @@ module.exports = {
 
                             if(!err && response.statusCode === 200) {
                                 authorized_plugins = response.body;
-                            }
-
-                            try {
-                                fs.mkdirSync(PLUGINS_DIR);
-                            } catch(err) {
-                                // process.stderr.write(err.message);
                             }
 
                             process.stdout.write(`Uninstalling plugin(s): ${options.plugin.join(', ')}\n`);

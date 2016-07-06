@@ -43,7 +43,7 @@ function set_middleware(middleware) {
     core.cli.middleware = _.flatten(core.cli.middleware);
 }
 
-var subcommands = {};
+const subcommands = {};
 
 // loads all default commands
 _.forEach(commands, (command, command_name) => {

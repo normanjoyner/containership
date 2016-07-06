@@ -1,6 +1,6 @@
 'use strict';
 
-const pkg = require('./../package.json');
+const pkg = require('../package.json');
 
 const _ = require('lodash');
 const daemon = require('daemon');
@@ -29,14 +29,14 @@ module.exports = {
                             if(err) {
                                 process.stderr.write('Error writing PID! Are you running containership as root?\n');
                                 process.exit(1);
-                            } else {
-                                options.version = pkg.version;
-                                options.mode = options.mode;
-                                core.scheduler.load_options(_.pick(options, _.keys(core.scheduler.options)));
-                                core.api.load_options(_.pick(options, _.keys(core.api.options)));
-                                core.load_options(options);
-                                core.initialize();
                             }
+
+                            options.version = pkg.version;
+                            options.mode = options.mode;
+                            core.scheduler.load_options(_.pick(options, _.keys(core.scheduler.options)));
+                            core.api.load_options(_.pick(options, _.keys(core.api.options)));
+                            core.load_options(options);
+                            core.initialize();
                         });
                     }
                 }

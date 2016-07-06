@@ -1,8 +1,8 @@
 'use strict';
 
-const config = require('./../lib/config');
-const request = require('./../lib/request');
-const utils = require('./../lib/utils');
+const config = require('../lib/config');
+const request = require('../lib/request');
+const utils = require('../lib/utils');
 
 const _ = require('lodash');
 const async = require('async');
@@ -15,6 +15,120 @@ const protocols = {
     http: require('http'),
     https: require('https')
 };
+
+const create_edit_options = {
+    application: {
+        position: 1,
+        help: 'Name of the application',
+        metavar: 'APPLICATION',
+        required: true
+    },
+
+    engine: {
+        help: 'Engine used to start application',
+        metavar: 'ENGINE',
+        choices: ['docker'],
+        abbr: 'x'
+    },
+
+    image: {
+        help: 'Application image',
+        metavar: 'IMAGE',
+        abbr: 'i'
+    },
+
+    'env-var': {
+        list: true,
+        help: 'Environment variable for application',
+        metavar: 'ENV_VAR=VALUE',
+        abbr: 'e'
+    },
+
+    'network-mode': {
+        help: 'Application network mode',
+        metavar: 'NETWORK MODE',
+        abbr: 'n'
+    },
+
+    'container-port': {
+        help: 'Port application must listen on',
+        metavar: 'PORT',
+        abbr: 'p'
+    },
+
+    command: {
+        help: 'Application start command',
+        metavar: 'COMMAND',
+        abbr: 's'
+    },
+
+    volume: {
+        help: 'Volume to bind-mount for application',
+        metavar: 'HOST_PATH:CONTAINER_PATH',
+        list: true,
+        abbr: 'b'
+    },
+
+    tag: {
+        help: 'Tag to add to application',
+        metavar: 'NAME=VALUE',
+        list: true,
+        abbr: 't'
+    },
+
+    cpus: {
+        help: 'CPUs allocated to application',
+        metavar: 'CPUS',
+        abbr: 'c'
+    },
+
+    memory: {
+        help: 'Memory (mb) allocated to application',
+        metavar: 'MEMORY',
+        abbr: 'm'
+    },
+
+    privileged: {
+        help: 'Run application containers in privileged mode',
+        metavar: 'PRIVILEGED',
+        choices: [true, false]
+    },
+
+    respawn: {
+        help: 'Respawn application containers when they die',
+        metavar: 'RESPAWN',
+        choices: [true, false]
+    }
+};
+
+function parse_update_body(options) {
+    if(_.has(options, 'tag')) {
+        options.tags = utils.parse_tags(options.tag);
+        delete options.tag;
+    }
+
+    if(_.has(options, 'volume')) {
+        options.volumes = utils.parse_volumes(options.volume);
+        delete options.volume;
+    }
+
+    if(_.has(options, 'env-var')) {
+        options.env_vars = utils.parse_tags(options['env-var']);
+        delete options['env-var'];
+    }
+
+    if(_.has(options, 'network-mode')) {
+        options.network_mode = options['network-mode'];
+        delete options['network-mode'];
+    }
+
+    if(_.has(options, 'container-port')) {
+        options.container_port = options['container-port'];
+        delete options['container-port'];
+    }
+
+    return options;
+}
 
 module.exports = {
 
@@ -39,8 +153,10 @@ module.exports = {
                     },
 
                     callback: (options) => {
+                        let c2c;
+
                         try {
-                            var c2c = new C2C({
+                            c2c = new C2C({
                                 compose_path: options['docker-compose'],
                                 containership_path: options['containership-compose']
                             });
@@ -72,119 +188,11 @@ module.exports = {
 
                 {
                     name: 'create',
-                    options: {
-                        application: {
-                            position: 1,
-                            help: 'Name of the application to create',
-                            metavar: 'APPLICATION',
-                            required: true
-                        },
-
-                        engine: {
-                            help: 'Engine used to start application',
-                            metavar: 'ENGINE',
-                            choices: ['docker'],
-                            abbr: 'x'
-                        },
-
-                        image: {
-                            help: 'Application image',
-                            metavar: 'IMAGE',
-                            required: true,
-                            abbr: 'i'
-                        },
-
-                        'env-var': {
-                            list: true,
-                            help: 'Environment variable for application',
-                            metavar: 'ENV_VAR=VALUE',
-                            abbr: 'e'
-                        },
-
-                        'network-mode': {
-                            help: 'Application network mode',
-                            metavar: 'NETWORK MODE',
-                            abbr: 'n'
-                        },
-
-                        'container-port': {
-                            help: 'Port application must listen on',
-                            metavar: 'PORT',
-                            abbr: 'p'
-                        },
-
-                        command: {
-                            help: 'Application start command',
-                            metavar: 'COMMAND',
-                            abbr: 's'
-                        },
-
-                        tag: {
-                            help: 'Tag to add to application',
-                            metavar: 'NAME=VALUE',
-                            list: true,
-                            abbr: 't'
-                        },
-
-                        volume: {
-                            help: 'Volume to bind-mount for application',
-                            metavar: 'HOST_PATH:CONTAINER_PATH',
-                            list: true,
-                            abbr: 'b'
-                        },
-
-                        cpus: {
-                            help: 'CPUs allocated to application',
-                            metavar: 'CPUS',
-                            abbr: 'c'
-                        },
-
-                        memory: {
-                            help: 'Memory (mb) allocated to application',
-                            metavar: 'MEMORY',
-                            abbr: 'm'
-                        },
-
-                        privileged: {
-                            help: 'Run application containers in privileged mode',
-                            metavar: 'PRIVILEGED',
-                            choices: [true, false]
-                        },
-
-                        respawn: {
-                            help: 'Respawn application containers when they die',
-                            metavar: 'RESPAWN',
-                            choices: [true, false]
-                        }
-                    },
+                    options: create_edit_options,
 
                     callback: (options) => {
                         options = _.omit(options, ['0', '_']);
-
-                        if(_.has(options, 'tag')) {
-                            options.tags = utils.parse_tags(options.tag);
-                            delete options.tag;
-                        }
-
-                        if(_.has(options, 'volume')) {
-                            options.volumes = utils.parse_volumes(options.volume);
-                            delete options.volume;
-                        }
-
-                        if(_.has(options, 'env-var')) {
-                            options.env_vars = utils.parse_tags(options['env-var']);
-                            delete options['env-var'];
-                        }
-
-                        if(_.has(options, 'network-mode')) {
-                            options.network_mode = options['network-mode'];
-                            delete options['network-mode'];
-                        }
-
-                        if(_.has(options, 'container-port')) {
-                            options.container_port = options['container-port'];
-                            delete options['container-port'];
-                        }
+                        options = parse_update_body(options);
 
                         request.post(`applications/${options.application}`, {}, options, (err, response) => {
                             if(err) {
@@ -202,108 +210,11 @@ module.exports = {
 
                 {
                     name: 'edit',
-                    options: {
-                        application: {
-                            position: 1,
-                            help: 'Name of the application to edit',
-                            metavar: 'APPLICATION',
-                            required: true
-                        },
-
-                        engine: {
-                            help: 'Engine used to start application',
-                            metavar: 'ENGINE',
-                            choices: ['docker'],
-                            abbr: 'x'
-                        },
-
-                        image: {
-                            help: 'Application image',
-                            metavar: 'IMAGE',
-                            abbr: 'i'
-                        },
-
-                        'env-var': {
-                            list: true,
-                            help: 'Environment variable for application',
-                            metavar: 'ENV_VAR=VALUE',
-                            abbr: 'e'
-                        },
-
-                        'network-mode': {
-                            help: 'Application network mode',
-                            metavar: 'NETWORK MODE',
-                            abbr: 'n'
-                        },
-
-                        'container-port': {
-                            help: 'Port application must listen on',
-                            metavar: 'PORT',
-                            abbr: 'p'
-                        },
-
-                        command: {
-                            help: 'Application start command',
-                            metavar: 'COMMAND',
-                            abbr: 's'
-                        },
-
-                        volume: {
-                            help: 'Volume to bind-mount for application',
-                            metavar: 'HOST_PATH:CONTAINER_PATH',
-                            list: true,
-                            abbr: 'b'
-                        },
-
-                        tag: {
-                            help: 'Tag to add to application',
-                            metavar: 'NAME=VALUE',
-                            list: true,
-                            abbr: 't'
-                        },
-
-                        cpus: {
-                            help: 'CPUs allocated to application',
-                            metavar: 'CPUS',
-                            abbr: 'c'
-                        },
-
-                        memory: {
-                            help: 'Memory (mb) allocated to application',
-                            metavar: 'MEMORY',
-                            abbr: 'm'
-                        },
-
-                        privileged: {
-                            help: 'Run application containers in privileged mode',
-                            metavar: 'PRIVILEGED',
-                            choices: [true, false]
-                        },
-
-                        respawn: {
-                            help: 'Respawn application containers when they die',
-                            metavar: 'RESPAWN',
-                            choices: [true, false]
-                        }
-                    },
+                    options: create_edit_options,
 
                     callback: (options) => {
                         options = _.omit(options, ['0', '_']);
-
-                        if(_.has(options, 'tag')) {
-                            options.tags = utils.parse_tags(options.tag);
-                            delete options.tag;
-                        }
-
-                        if(_.has(options, 'volume')) {
-                            options.volumes = utils.parse_volumes(options.volume);
-                            delete options.volume;
-                        }
-
-                        if(_.has(options, 'env-var')) {
-                            options.env_vars = utils.parse_tags(options['env-var']);
-                            delete options['env-var'];
-                        }
+                        options = parse_update_body(options);
 
                         request.put(`applications/${options.application}`, {}, options, (err, response) => {
                             if(err) {
@@ -340,7 +251,7 @@ module.exports = {
                             ]);
 
                             _.forEach(response.body, (application) => {
-                                var parsed_containers = _.groupBy(application.containers, (container) => container.status);
+                                const parsed_containers = _.groupBy(application.containers, (container) => container.status);
 
                                 var loaded_containers = parsed_containers.loaded || [];
                                 utils.println([
@@ -622,7 +533,7 @@ module.exports = {
                                                     process.stdout.write(colors.red(`[${json.name}]\t ${json.data}\n`));
                                                 }
                                             } catch(err) {
-                                                // process.stderr.write(err.message);
+                                                process.stderr.write(colors.red('Unable to parse log'));
                                             }
                                         });
                                     }

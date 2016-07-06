@@ -1,7 +1,7 @@
 'use strict';
 
-const config = require('./../lib/config');
-const utils = require('./../lib/utils');
+const config = require('../lib/config');
+const utils = require('../lib/utils');
 
 const _ = require('lodash');
 

@@ -1,7 +1,7 @@
 'use strict';
 
-const request = require('./../lib/request');
-const utils = require('./../lib/utils');
+const request = require('../lib/request');
+const utils = require('../lib/utils');
 
 const _ = require('lodash');
 const flat = require('flat');
