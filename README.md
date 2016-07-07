@@ -11,15 +11,14 @@ ContainerShip is an open source container management platform which aims to be t
 ### Author
 ContainerShip Developers - developers@containership.io
 
-### Introduction
-[![Intro to containership](https://asciinema.org/a/40576.png)](https://asciinema.org/a/40576)
+### Demo
+[![ContainerShip Demo](https://asciinema.org/a/40576.png)](https://asciinema.org/a/40576)
 
 ### Repository Structure
 This repository is a minimal wrapper around various other official ContainerShip repositories which comprise the full containership package:
 
 * [`codexd`](https://github.com/containership/codexd) - filesystem snapshotting and replication built atop legiond
 * [`containership.api`](https://github.com/containership/containership.api) - containership leader API
-* [`containership.cli`](https://github.com/containership/containership.cli) - containership CLI
 * [`containership.core`](https://github.com/containership/containership.core) - core containership functionality
 * [`containership.scheduler`](https://github.com/containership/containership.scheduler) - default containership scheduler
 * [`legiond`](https://github.com/containership/legiond) - secure distributed event layer for nodejs applications
@@ -48,6 +47,9 @@ Absolutely! First install [Vagrant](https://www.vagrantup.com), then install our
 
 ### This is pretty cool, how can I get a production cluster setup?
 ContainerShip will run on any linux host with node & docker (see [our installation guide](https://docs.containership.io/docs/installation) for more details). If you're using open source ContainerShip, use our [official setting up your first cluster guide](https://docs.containership.io/docs/setting-up-your-first-cluster). If you'd like to manage your ContainerShip cluster using our ContainerShip Cloud management product, sign up for an account and follow the official [getting started guide](https://docs.containership.io/docs/getting-started).
+
+### How can I make modifications to ContainerShip locally?
+Read more about [local development](dev/README.md)
 
 ## Support & Community
 * Join our [Slack Community](https://slack.containership.io)
