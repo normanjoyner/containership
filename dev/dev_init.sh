@@ -2,6 +2,10 @@
 
 HUB_CONFIG=~/.config/hub
 
+if [ -f "$HUB_CONFIG" ]; then
+    github_user=$(grep -o 'user: .*' $HUB_CONFIG | awk '{print $2}')
+fi
+
 function yn_prompt {
     local prompt=$1
 
@@ -30,6 +34,7 @@ case $script_arg in
         ;;
     all)
         all=true
+        npm_remove_existing=$2
         ;;
     *)
         printf "Please pass either git, npm_install, symlink, or all in as a command.\n\n"
@@ -64,7 +69,6 @@ containership_repos=(
     "containership"
     "containership.analytics"
     "containership.api"
-    "containership.cli"
     "containership.core"
     "containership.scheduler"
     "codexd"
@@ -86,16 +90,24 @@ function setupRepo {
         echo "Forking $repo (if not already forked) and adding remote..."
         cd $repo
 
-        if [[ -z "$github_user" ]] || ! git remote -v | grep "$github_user" > /dev/null; then
-            hub fork
-
-            if [[ -z "$github_user" ]]; then
-                github_user=$(grep -o 'user: .*' ~/.config/hub | awk '{print $2}')
-            fi
-
-            git remote rename origin upstream
-            git remote rename $github_user origin
+        if git remote -v | grep "origin" > /dev/null; then
+            git remote remove origin
         fi
+
+        if git remote -v | grep "upstream" > /dev/null; then
+            git remote remove upstream
+        fi
+
+        git remote add origin git@github.com:containership/$repo.git
+        hub fork
+
+        # if we don't have their username from the hub config yet
+        if [[ -z "$github_user" ]]; then
+            github_user=$(grep -o 'user: .*' ~/.config/hub | awk '{print $2}')
+        fi
+
+        git remote rename origin upstream
+        git remote rename $github_user origin
 
         cd $containership_dir
     fi
@@ -124,10 +136,16 @@ if [ "$all" == true ] || [ "$symlink" == true ]; then
             echo "Attempting to symlink all modules inside: $repo..."
 
             for repo in ${containership_repos[@]}; do
-                if [ -d $repo ]; then
+                if [ -d "$repo" ]; then
                     echo "Symlinking $repo -> ../../$repo"
                     rm -rf $repo
                     ln -sF ../../$repo $repo
+                fi
+
+                if [ -d "@containership/$repo" ]; then
+                    echo "Symlinking @containership/$repo -> ../../../$repo"
+                    rm -rf @containership/$repo
+                    ln -sF ../../../$repo @containership/$repo
                 fi
             done
 
