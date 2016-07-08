@@ -1955,9 +1955,9 @@
       }
     },
     "containership.core": {
-      "version": "1.6.0",
-      "from": "containership.core@>=1.6.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.6.0.tgz",
+      "version": "1.6.1",
+      "from": "containership.core@>=1.6.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.6.1.tgz",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -2304,6 +2304,16 @@
           "version": "2.4.2",
           "from": "lodash@^2.4.1",
           "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz"
+        },
+        "minimist": {
+          "version": "0.0.8",
+          "from": "minimist@0.0.8",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
+        },
+        "mkdirp": {
+          "version": "0.5.1",
+          "from": "mkdirp@>=0.5.0 <0.6.0",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz"
         },
         "myriad-kv": {
           "version": "0.3.6",
@@ -2996,9 +3006,9 @@
       }
     },
     "containership.scheduler": {
-      "version": "1.5.3",
-      "from": "containership.scheduler@>=1.5.3 <2.0.0",
-      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-1.5.3.tgz",
+      "version": "1.5.4",
+      "from": "containership.scheduler@>=1.5.4 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-1.5.4.tgz",
       "dependencies": {
         "async": {
           "version": "0.9.0",

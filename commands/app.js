@@ -242,12 +242,12 @@ module.exports = {
                             }
 
                             utils.println([
-                                ['%-40s', 'APPLICATION'],
-                                ['%-60s', 'IMAGE'],
-                                ['%-45s', 'COMMAND'],
+                                ['%-50s', 'APPLICATION'],
+                                ['%-80s', 'IMAGE'],
+                                ['%-50s', 'COMMAND'],
                                 ['%-5s', 'CPUS'],
                                 ['%-10s', 'MEMORY'],
-                                ['%-10s', 'CONTAINERS'],
+                                ['%-6s', 'CONTAINERS'],
                             ]);
 
                             _.forEach(response.body, (application) => {
@@ -255,12 +255,12 @@ module.exports = {
 
                                 var loaded_containers = parsed_containers.loaded || [];
                                 utils.println([
-                                    ['%-40s', application.id],
-                                    ['%-60s', application.image],
-                                    ['%-45s', application.command],
+                                    ['%-50s', application.id],
+                                    ['%-80s', application.image],
+                                    ['%-50s', application.command],
                                     ['%-5s', application.cpus],
                                     ['%-10s', application.memory],
-                                    ['%-10s', `${loaded_containers.length || 0}/${application.containers.length}`]
+                                    ['%-6s', `${loaded_containers.length || 0}/${application.containers.length}`]
                                 ]);
                             });
                         });
