@@ -27,19 +27,19 @@ case $script_arg in
         ;;
     npm_install)
         npm_install=true
-        npm_remove_existing=$2
+        npm_flag=$2
         ;;
     symlink)
         symlink=true
         ;;
     all)
         all=true
-        npm_remove_existing=$2
+        npm_flag=$2
         ;;
     *)
         printf "Please pass either git, npm_install, symlink, or all in as a command.\n\n"
         printf "git:\n\tWill attempt to clone, fork, and add remotes to all relevant containership repos\n"
-        printf "npm_install:\n\tWill run npm install in all the containership repos.\n\tAdd flag --remove-existing to wipe existing node_modules before installing\n"
+        printf "npm_install:\n\tWill run npm install in all the containership repos.\n\tAdd flag --reinstall_node_modules to wipe existing node_modules before installing\n"
         printf "symlink:\n\tWill attempt to symlink all containership repo node_modules to your corresponding git repo\n"
         printf "all:\n\tWill execute all of the above commands\n"
         exit 1
@@ -115,7 +115,7 @@ function setupRepo {
     if [ "$all" == true ] || [ "$npm_install" == true ]; then
         cd $repo
 
-        if [ "$npm_remove_existing" == "--remove-existing" ]; then
+        if [ "$npm_flag" == "--reinstall_node_modules" ]; then
             rm -rf ./node_modules/*
         fi
 
