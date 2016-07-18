@@ -23,7 +23,6 @@ module.exports = {
             process.exit(1);
         }
 
-
         return {
             commands: [
                 {
@@ -242,12 +241,6 @@ module.exports = {
 
                             if(!err && response.statusCode != 200) {
                                 authorized_plugins = response.body;
-                            }
-
-                            try {
-                                fs.mkdirSync(PLUGINS_DIR);
-                            } catch(err) {
-                                process.stderr.write(err.message);
                             }
 
                             npm.load({
