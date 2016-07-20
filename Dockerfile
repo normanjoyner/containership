@@ -27,4 +27,4 @@ VOLUME /mnt/codexd
 VOLUME /tmp/codexd
 
 # set entrypoint
-ENTRYPOINT ["node", "index.js", "agent"]
+ENTRYPOINT ["node", "index.js"]
