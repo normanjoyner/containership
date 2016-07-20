@@ -26,3 +26,12 @@ publish:
     tag: $$TAG
     when:
       event: tag
+  docker:
+    username: "$$DOCKERHUB_USERNAME"
+    password: "$$DOCKERHUB_PASSWORD"
+    email: "$$DOCKERHUB_EMAIL"
+    repo: containership/containership
+    tag: latest
+    when:
+      branch: master
+      event: push
