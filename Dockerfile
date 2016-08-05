@@ -21,10 +21,10 @@ EXPOSE 2777
 EXPOSE 8080
 
 # specify volumes
+VOLUME /var/run/docker.sock
 VOLUME /var/log/containership
 VOLUME /root/.containership
-VOLUME /mnt/codexd
-VOLUME /tmp/codexd
+VOLUME /opt/containership
 
 # set entrypoint
 ENTRYPOINT ["node", "index.js"]
