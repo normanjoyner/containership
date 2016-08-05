@@ -1955,9 +1955,9 @@
       }
     },
     "containership.core": {
-      "version": "1.6.2",
-      "from": "containership.core@>=1.6.2 <2.0.0",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.6.2.tgz",
+      "version": "1.6.3",
+      "from": "containership.core@>=1.6.3 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.6.3.tgz",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -2074,9 +2074,9 @@
           }
         },
         "codexd": {
-          "version": "0.2.0",
-          "from": "codexd@0.2.0",
-          "resolved": "http://registry.npmjs.org/codexd/-/codexd-0.2.0.tgz",
+          "version": "0.2.1",
+          "from": "codexd@0.2.1",
+          "resolved": "http://registry.npmjs.org/codexd/-/codexd-0.2.1.tgz",
           "dependencies": {
             "async": {
               "version": "1.5.0",
@@ -2993,9 +2993,9 @@
       }
     },
     "containership.scheduler": {
-      "version": "1.5.4",
-      "from": "containership.scheduler@>=1.5.4 <2.0.0",
-      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-1.5.4.tgz",
+      "version": "1.5.5",
+      "from": "containership.scheduler@>=1.5.5 <2.0.0",
+      "resolved": "https://registry.npmjs.org/containership.scheduler/-/containership.scheduler-1.5.5.tgz",
       "dependencies": {
         "async": {
           "version": "0.9.0",
