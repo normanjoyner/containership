@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.3.0
+FROM mhart/alpine-node:6.8.0
 
 MAINTAINER ContainerShip Developers <developers@containership.io>
 
