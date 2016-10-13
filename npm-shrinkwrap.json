@@ -1377,9 +1377,9 @@
       }
     },
     "containership.core": {
-      "version": "1.7.4",
-      "from": "containership.core@1.7.4",
-      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.7.4.tgz",
+      "version": "1.7.5",
+      "from": "containership.core@1.7.5",
+      "resolved": "https://registry.npmjs.org/containership.core/-/containership.core-1.7.5.tgz",
       "dependencies": {
         "async": {
           "version": "0.8.0",
@@ -1587,9 +1587,9 @@
           "resolved": "https://registry.npmjs.org/flat/-/flat-1.6.0.tgz"
         },
         "myriad-kv": {
-          "version": "0.3.11",
-          "from": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.11.tgz",
-          "resolved": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.11.tgz",
+          "version": "0.3.12",
+          "from": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.12.tgz",
+          "resolved": "https://registry.npmjs.org/myriad-kv/-/myriad-kv-0.3.12.tgz",
           "dependencies": {
             "async": {
               "version": "1.0.0",
