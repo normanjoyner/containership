@@ -35,7 +35,7 @@
     "containership.analytics": "^0.1.3",
     "containership.api": "^1.4.3",
     "containership.cli": "^1.1.0",
-    "containership.core": "^1.8.0",
+    "containership.core": "^1.8.1",
     "containership.scheduler": "^1.6.8",
     "flat": "1.5.0",
     "lodash": "^2.4.1",
