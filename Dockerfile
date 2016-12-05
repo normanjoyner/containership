@@ -10,7 +10,7 @@ ADD . /app
 ENV NODE_ENV development
 
 # install required packages and dependencies
-RUN apk --update add build-base git python-dev ruby-dev ruby-irb ruby-bundler ruby-rdoc ca-certificates libffi-dev && npm install && gem install ohai && apk del build-base git python-dev ruby-dev ruby-irb ruby-bundler ca-certificates libffi-dev
+RUN apk --update add build-base git python-dev ruby-dev ruby-irb ruby-bundler ruby-rdoc ca-certificates libffi-dev && npm install yarn -g && yarn install --pure-lockfile --ignore-engines && gem install ohai && apk del build-base git python-dev ruby-dev ruby-irb ruby-bundler ca-certificates libffi-dev
 
 # expose ports
 EXPOSE 2666
