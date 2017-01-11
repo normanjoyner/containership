@@ -541,9 +541,9 @@ containership.core.constants@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/containership.core.constants/-/containership.core.constants-0.1.0.tgz#fa0aede41e52b302a020f8524ed24ce8600d4434"
 
-containership.core@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.0.tgz#3efd04b15eeaa0191f9ea5bbc7e1ec770c752989"
+containership.core@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.1.tgz#ec22307f508d0be86ad1af8470977fcfbad23342"
   dependencies:
     async "^0.8.0"
     body-parser "^1.4.3"
@@ -552,15 +552,15 @@ containership.core@^2.0.0:
     flat "^1.6.0"
     lodash "^2.4.1"
     mkdirp "^0.5.1"
-    myriad-kv "^1.0.0"
+    myriad-kv "^1.0.1"
     node-uuid "^1.4.7"
     ohai-data "^0.1.0"
     request "^2.51.0"
     winston "^0.7.3"
 
-containership.scheduler@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/containership.scheduler/-/containership.scheduler-2.0.2.tgz#8aa1de619b456d7e6a97d0a1ec118c0c454f9e30"
+containership.scheduler@1.6.8:
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/containership.scheduler/-/containership.scheduler-1.6.8.tgz#1a535393586af47ed8921647f19b895028c8067b"
   dependencies:
     async "^0.9.0"
     dockerode "^2.3.0"
@@ -1037,11 +1037,11 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flat@1.5.0:
+flat@1.5.0, flat@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/flat/-/flat-1.5.0.tgz#77e304b51e69127c7ba2fd0b35a2358a2530d87b"
 
-flat@^1.5.0, flat@^1.6.0:
+flat@^1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/flat/-/flat-1.6.1.tgz#476b9dbb70d5e9340dbbc038bde084a20945921c"
   dependencies:
@@ -1641,14 +1641,14 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-legiond@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/legiond/-/legiond-2.0.0.tgz#64883d941be892346c0df155e0fffb29f8bb2979"
+legiond@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/legiond/-/legiond-2.0.1.tgz#773d75cd7286b0f878984ce1a7bcd9cba2615e4d"
   dependencies:
     async "^0.9.0"
     eventemitter2 "^0.4.13"
     json-stream2 "^0.0.3"
-    lodash "^2.4.1"
+    lodash "^4.17.4"
     memorystream "^0.3.1"
     mkdirp "^0.5.1"
     netmask "^1.0.5"
@@ -1688,6 +1688,10 @@ lodash@^2.4.1:
 lodash@^3.1.0, lodash@^3.10.1, lodash@^3.9.3:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
+lodash@^4.17.4:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
 lru-cache@2:
   version "2.7.3"
@@ -1816,15 +1820,15 @@ mute-stream@0.0.5, mute-stream@~0.0.4:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
-myriad-kv@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/myriad-kv/-/myriad-kv-1.0.0.tgz#9dea6e808743cec23533c4265fd2801d2555361b"
+myriad-kv@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/myriad-kv/-/myriad-kv-1.0.1.tgz#60bf2e37ae35beb3ed1bf717fae59fde18540cd5"
   dependencies:
     async "^1.0.0"
     lodash "^3.9.3"
     msgpack-js "^0.3.0"
     native-dns "^0.7.0"
-    praetor "^1.0.0"
+    praetor "^1.0.1"
     winston "^1.0.0"
 
 nan@^2.3.0:
@@ -2237,12 +2241,12 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
-praetor@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.0.tgz#59b81fadb019852074c08ce19031df4336c53536"
+praetor@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.1.tgz#66427d3141bcd8cae20816169eae2ee4982fd598"
   dependencies:
     eventemitter2 "^0.4.14"
-    legiond "^2.0.0"
+    legiond "^2.0.1"
     lodash "^2.4.1"
 
 prelude-ls@~1.1.2:
