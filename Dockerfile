@@ -11,13 +11,12 @@ ENV NODE_ENV development
 ENV CS_NO_ANALYTICS true
 
 # install required packages and dependencies
-RUN apk --update add --no-cache --virtual .build-deps build-base git python-dev ruby-dev ruby-irb ruby-bundler ca-certificates libffi-dev \
-    && yarn install --pure-lockfile --ignore-engines \
-    && echo "gem: --no-document" > /root/.gemrc \
-    && gem install ohai \
+RUN apk --update add --no-cache --virtual .build-deps build-base git python-dev ruby-dev ruby-irb ruby-bundler libffi-dev \
+    && apk add --no-cache ca-certificates \
+    && yarn install --pure-lockfile --ignore-engines --production \
+    && gem install ohai --no-document \
     && apk del .build-deps \
-    && rm -rf /var/cache/apk/* \
-    && apk add ca-certificates
+    && rm -rf /var/cache/apk/*
 
 # create tmp directory for codexd snapshots
 RUN mkdir -p /tmp/codexd
