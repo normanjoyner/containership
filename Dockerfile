@@ -17,6 +17,7 @@ RUN apk --update add --no-cache --virtual .build-deps build-base git python-dev 
     && gem install ohai \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/*
+    && apk add ca-certificates
 
 # create tmp directory for codexd snapshots
 RUN mkdir -p /tmp/codexd
