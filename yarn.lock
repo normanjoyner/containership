@@ -553,9 +553,9 @@ containership.core.constants@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/containership.core.constants/-/containership.core.constants-0.1.0.tgz#fa0aede41e52b302a020f8524ed24ce8600d4434"
 
-containership.core@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.4.tgz#43c4585faeaf31b26e7899f32ff7d8ee7c947f9f"
+containership.core@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.5.tgz#ccf348f73501af2e680bb890aac468e570fbe08e"
   dependencies:
     async "^0.8.0"
     body-parser "^1.4.3"
@@ -564,15 +564,15 @@ containership.core@^2.0.4:
     flat "^1.6.0"
     lodash "4.17.4"
     mkdirp "^0.5.1"
-    myriad-kv "^1.0.1"
+    myriad-kv "^1.1.0"
     node-uuid "^1.4.7"
     ohai-data "^0.1.0"
     request "^2.51.0"
     winston "^0.7.3"
 
-containership.scheduler@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/containership.scheduler/-/containership.scheduler-2.0.4.tgz#48c104c11d766a1d92c9758ec5c88381f2385a7b"
+containership.scheduler@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/containership.scheduler/-/containership.scheduler-2.0.5.tgz#07308938858ce1e0de5c0a84f9c0872f71ce739c"
   dependencies:
     async "^0.9.0"
     containership.core.constants "^0.1.0"
@@ -1894,15 +1894,15 @@ myriad-kv-client@^0.5.0:
     lodash "^4.15.0"
     yargs "^5.0.0"
 
-myriad-kv@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/myriad-kv/-/myriad-kv-1.0.1.tgz#60bf2e37ae35beb3ed1bf717fae59fde18540cd5"
+myriad-kv@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/myriad-kv/-/myriad-kv-1.1.0.tgz#cb3b2b2da4b9a6321ab0fe7ac187d724da2e876f"
   dependencies:
     async "^1.0.0"
     lodash "^3.9.3"
     msgpack-js "^0.3.0"
     native-dns "^0.7.0"
-    praetor "^1.0.1"
+    praetor "^1.0.2"
     winston "^1.0.0"
 
 nan@^2.3.0:
@@ -2341,9 +2341,9 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
-praetor@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.1.tgz#66427d3141bcd8cae20816169eae2ee4982fd598"
+praetor@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.2.tgz#0d95f7dd1b9930f90864dbd8e03aa4b136d47ce4"
   dependencies:
     eventemitter2 "^0.4.14"
     legiond "^2.0.1"
