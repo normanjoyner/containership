@@ -571,9 +571,9 @@ containership.core@^2.0.6:
     request "^2.51.0"
     winston "^0.7.3"
 
-containership.scheduler@2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/containership.scheduler/-/containership.scheduler-2.0.10.tgz#3634e852c9a47f8f5e4220ba7d50825d68e27ccd"
+containership.scheduler@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/containership.scheduler/-/containership.scheduler-2.0.11.tgz#944fa9ed035e1dfb47e53db506698271df2e4fba"
   dependencies:
     async "^0.9.0"
     containership.core.constants "^0.1.0"
