@@ -11,8 +11,8 @@ ENV NODE_ENV development
 ENV CS_NO_ANALYTICS true
 
 # install required packages and dependencies
-RUN apk --update add --no-cache --virtual .build-deps build-base python-dev ruby-dev ruby-irb ruby-bundler libffi-dev \
-    && apk add --no-cache ca-certificates git iptables \
+RUN apk --update add --no-cache --virtual .build-deps build-base python-dev ruby-dev ruby-bundler libffi-dev \
+    && apk add --no-cache ca-certificates git iptables ruby-irb \
     && yarn install --pure-lockfile --ignore-engines --production \
     && gem install ohai --no-document \
     && apk del .build-deps \
