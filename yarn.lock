@@ -554,9 +554,9 @@ containership.core.constants@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/containership.core.constants/-/containership.core.constants-0.1.0.tgz#fa0aede41e52b302a020f8524ed24ce8600d4434"
 
-containership.core@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.6.tgz#b4d26df6d88dd40e60db7784c4120c51b44d3b75"
+containership.core@2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.7.tgz#b94c9b11474541c4c47ee1534dd6f69d6b7125d0"
   dependencies:
     async "^0.8.0"
     body-parser "^1.4.3"
@@ -1069,11 +1069,11 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flat@1.5.0:
+flat@1.5.0, flat@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/flat/-/flat-1.5.0.tgz#77e304b51e69127c7ba2fd0b35a2358a2530d87b"
 
-flat@^1.5.0, flat@^1.6.0:
+flat@^1.6.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/flat/-/flat-1.6.1.tgz#476b9dbb70d5e9340dbbc038bde084a20945921c"
   dependencies:
@@ -1745,11 +1745,11 @@ lodash.padstart@^4.1.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.padstart/-/lodash.padstart-4.6.1.tgz#d2e3eebff0d9d39ad50f5cbd1b52a7bce6bb611b"
 
-lodash@4.17.2:
+lodash@4.17.2, lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.3.0:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
-lodash@4.17.4, lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.4, lodash@^4.3.0:
+lodash@4.17.4, lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
