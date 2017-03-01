@@ -554,9 +554,9 @@ containership.core.constants@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/containership.core.constants/-/containership.core.constants-0.1.0.tgz#fa0aede41e52b302a020f8524ed24ce8600d4434"
 
-containership.core@2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.8.tgz#7b76c1c72e67e311a8c01755cc67cba99996f1b1"
+containership.core@2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.9.tgz#131f73f21dd41506653d257c51ef5bf3b4d03851"
   dependencies:
     async "^0.8.0"
     body-parser "^1.4.3"
@@ -565,7 +565,7 @@ containership.core@2.0.8:
     flat "^1.6.0"
     lodash "4.17.4"
     mkdirp "^0.5.1"
-    myriad-kv "1.2.0"
+    myriad-kv "1.2.1"
     node-uuid "^1.4.7"
     ohai-data "^0.1.0"
     request "^2.51.0"
@@ -1895,9 +1895,9 @@ myriad-kv-client@^0.5.0:
     lodash "^4.15.0"
     yargs "^5.0.0"
 
-myriad-kv@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/myriad-kv/-/myriad-kv-1.2.0.tgz#84da435d41b38841469c487163af3c008115c31e"
+myriad-kv@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/myriad-kv/-/myriad-kv-1.2.1.tgz#fdf4fe2cee97b58c3d78905ba32b0d46a9ba7105"
   dependencies:
     async "^1.0.0"
     lodash "^3.9.3"
