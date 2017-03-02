@@ -554,9 +554,9 @@ containership.core.constants@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/containership.core.constants/-/containership.core.constants-0.1.0.tgz#fa0aede41e52b302a020f8524ed24ce8600d4434"
 
-containership.core@2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.9.tgz#131f73f21dd41506653d257c51ef5bf3b4d03851"
+containership.core@2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.0.10.tgz#3e2b2d0d59714461df7ce4337ca609d1a628bd6c"
   dependencies:
     async "^0.8.0"
     body-parser "^1.4.3"
