@@ -554,9 +554,9 @@ containership.core.constants@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/containership.core.constants/-/containership.core.constants-0.1.0.tgz#fa0aede41e52b302a020f8524ed24ce8600d4434"
 
-containership.core@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.1.0.tgz#2e746eae59eb18251096a5570c7573d6fda8dd16"
+containership.core@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/containership.core/-/containership.core-2.1.1.tgz#058e78c2d9eb11210fb47dadfe1233c1b3f090d1"
   dependencies:
     async "^0.8.0"
     body-parser "^1.4.3"
@@ -568,6 +568,7 @@ containership.core@2.1.0:
     myriad-kv "1.2.2"
     node-uuid "^1.4.7"
     ohai-data "^0.1.0"
+    praetor "1.2.0"
     request "^2.51.0"
     winston "^0.7.3"
 
@@ -1708,6 +1709,19 @@ legiond@3.0.0:
     netmask "^1.0.5"
     network "^0.1.3"
 
+legiond@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/legiond/-/legiond-3.1.0.tgz#c99da536a99b196d8556fdd406a1f86c80ff1212"
+  dependencies:
+    async "^0.9.0"
+    eventemitter2 "^0.4.13"
+    json-stream2 "^0.0.3"
+    lodash "^4.17.4"
+    memorystream "^0.3.1"
+    mkdirp "^0.5.1"
+    netmask "^1.0.5"
+    network "^0.1.3"
+
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.3.0.tgz#3b09924edf9f083c0490fdd4c0bc4421e04764ee"
@@ -2348,6 +2362,14 @@ praetor@1.1.2:
   dependencies:
     eventemitter2 "^0.4.14"
     legiond "3.0.0"
+    lodash "^2.4.1"
+
+praetor@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.2.0.tgz#6f0a07abf8dedaea15adece592f1e9d62a2eab8e"
+  dependencies:
+    eventemitter2 "^0.4.14"
+    legiond "3.1.0"
     lodash "^2.4.1"
 
 prelude-ls@~1.1.2:
