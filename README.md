@@ -46,7 +46,7 @@ The containership plugin system allows for the core of containership to be overr
 Absolutely! First install [Vagrant](https://www.vagrantup.com), then install our [cloud plugin](https://github.com/containership/containership.plugin.cloud) by running `cs plugin add cloud`. Once installed, run `cs cloud create-cluster vagrant --leaders 1 --followers 2` to bring up a local cluster to play around with.
 
 ### This is pretty cool, how can I get a production cluster setup?
-Containership will run on any linux host with node & docker (see [our installation guide](https://docs.containership.io/docs/installation) for more details). If you're using open source Containership, use our [official setting up your first cluster guide](https://docs.containership.io/docs/setting-up-your-first-cluster). If you'd like to manage your Containership cluster using our Containership Cloud management product, sign up for an account and follow the official [getting started guide](https://docs.containership.io/docs/getting-started).
+Containership will run on any linux host with node & docker (see [our installation guide](https://containership.readme.io/docs/installation) for more details). If you're using open source Containership, use our [official setting up your first cluster guide](https://containership.readme.io/docs/setting-up-your-first-cluster). If you'd like to manage your Containership cluster using our Containership Cloud management product, sign up for an account and follow the official [getting started guide](https://docs.containership.io/getting-started).
 
 ### How can I make modifications to Containership locally?
 Read more about [local development](dev/README.md)
